@@ -6,8 +6,8 @@ public class Policy {
     private String lastName;
     private int age;
     private String smokingStatus;
-    private int height;
-    private int weight;
+    private double height;
+    private double weight;
 
     public Policy() {
         this.policyNumber = "";
@@ -20,7 +20,7 @@ public class Policy {
         this.weight = 0;
     }
 
-    public Policy(String policyNumber, String providerName, String firstName, String lastName, int age, String smokingStatus, int height, int weight) {
+    public Policy(String policyNumber, String providerName, String firstName, String lastName, int age, String smokingStatus, double height, double weight) {
         this.policyNumber = policyNumber;
         this.providerName = providerName;
         this.firstName = firstName;
@@ -79,25 +79,24 @@ public class Policy {
         this.smokingStatus = smokingStatus;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
     public double calculateBMI() {
-        double heightInMeters = this.height / 39.37; // convert inches to meters
-        return (this.weight * 703) / (heightInMeters * heightInMeters);
+                return (this.weight * 703) / (height * height);
     }
 
     public double calculatePolicyPrice() {

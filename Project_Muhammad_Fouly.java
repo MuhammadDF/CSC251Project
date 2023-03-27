@@ -32,6 +32,6 @@ public class Project_Muhammad_Fouly {
         System.out.println("Policyholder’s Height: " + policy.getHeight() + " inches");
         System.out.println("Policyholder’s Weight: " + policy.getWeight() + " pounds");
         System.out.printf("Policyholder’s BMI: %.2f\n", policy.calculateBMI());
-        System.out.printf("Policy Price: $%.2f\n", policy.calculatePrice());
+        System.out.printf("Policy Price: $%.2f\n", policy.calculatePolicyPrice());
     }
 }
