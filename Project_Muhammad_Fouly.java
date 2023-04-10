@@ -33,5 +33,17 @@ public class Project_Muhammad_Fouly {
         System.out.println("Policyholder’s Weight: " + policy.getWeight() + " pounds");
         System.out.printf("Policyholder’s BMI: %.2f\n", policy.calculateBMI());
         System.out.printf("Policy Price: $%.2f\n", policy.calculatePolicyPrice());
-    }
+        int smokerCount = 0;
+int nonSmokerCount = 0;
+
+   if (policy.getSmokingStatus().equals("smoker")) {
+      smokerCount++;
+   } else {
+      nonSmokerCount++;
+   }
 }
+
+System.out.println("The number of policies with a smoker is: " + smokerCount);
+System.out.println("The number of policies with a non-smoker is: " + nonSmokerCount);
+    }
+
